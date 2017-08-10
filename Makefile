@@ -14,12 +14,12 @@ clean:
 
 prep: clean
 	@echo "Getting dependancies"
-	cd deps; pip install -r ../requirements.txt --target=./
-	cd deps; zip -r9q ../src/vendor.zip ./*
+	cd deps; pip install -r ../requirements.txt --upgrade --target=./
+	cd deps; zip -r9v ../src/vendor.zip ./*
 
 build: prep
 	@echo "Building"
-	cd src; zip -r9q ../dist/trmpt-app.zip ./*
+	cd src; zip -r9v ../dist/trmpt-app.zip ./*
 
 install:
 	@echo "Deploying"
